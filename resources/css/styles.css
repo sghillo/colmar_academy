@@ -1,0 +1,468 @@
+/* Universal Styles */
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+/* Header */
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: white;
+  height: 64px;
+  position: static;
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header img {
+  margin-right: 5px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  float: left;
+  padding: 22px 0;
+}
+
+.logo strong {
+  font-weight: bold;
+}
+
+header span {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 24px;
+  padding-top: 30px;
+  position: relative;
+}
+
+nav a {
+  color: #474a51;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .mobile {
+    display: block;
+    width: 90%;
+  }
+
+  header span {
+    display: none;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  nav li {
+    padding-top: 22px;
+  }
+}
+
+/* Main Content */
+
+.main-content {
+    position: relative;
+  }
+
+/* First Section */
+
+#first-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.banner {
+  padding: 32px 24px;
+  width: 60%;
+}
+
+.banner img {
+  width: 100%;
+  float: left;
+}
+
+#sign-up-section {
+  position: relative;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#sign-up-cta span {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.button {
+  border-radius: 10px;
+  background-color: #474a51;
+  color: white;
+  width: 25%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+div .button {
+  margin-top: 1.65rem;
+  padding: 1.25rem 7.25rem;
+  font-size: 1.2rem;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 760px) {
+  #first-section {
+    align-items: center;
+    justify-content: center;
+    position: static;
+    flex-flow: column;
+  }
+
+  .banner {
+    margin-top: 0;
+    border: 0;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  #sign-up-cta {
+    padding-bottom: 32px;
+  }
+
+  #sign-up-cta span {
+    font-size: 1rem;
+  }
+
+  div .button {
+    margin-top: 24px;
+    font-size: .75rem;
+  }
+}
+
+/* Second Section */
+
+.second-section {
+  display: flex;
+  width: 100%;
+  background-color: #F3F5F5;
+}
+
+.main-info {
+  flex-direction: column;
+  width: 60%;
+}
+
+.copy {
+  width: 80%;
+  padding: 32px 24px;
+}
+
+.copy img {
+  width: 100%;
+  height: auto;
+  float: left;
+  padding-bottom: 32px;
+  margin: 0;
+}
+
+div h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+div h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+div p {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 32px 30px 42px 0;
+}
+
+div .row {
+  border: 0.5px solid lightgrey;
+  cursor: pointer;
+  height: 33%;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+}
+
+.row img {
+  width: 100%;
+  height: auto;
+  padding: 16px 16px;
+}
+
+.info {
+  margin: 37px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 760px) {
+  div .main-info {
+    display: none;
+  }
+
+ .column {
+   align-items: center;
+   justify-content: center;
+   position: static;
+   width: 100%;
+   height: auto;
+ }
+
+ div .row {
+   border: none;
+   flex-flow: column;
+   width: 100%;
+ }
+
+ .row img {
+   width: auto;
+ }
+
+ #cta {
+   text-decoration: underline;
+   color: blue;
+ }
+
+}
+
+/* Courses Section */
+
+.courses {
+  text-align: center;
+  padding: 32px 72px;
+}
+
+.courses h1 {
+  padding: 32px 0;
+}
+
+.sl-container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 72px;
+}
+
+.sl-row {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  float:left;
+  width:33.33333%;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.box-info {
+  padding: 16px 24px;
+  height: auto;
+  text-align: left;
+}
+
+div.box.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+
+  div .courses {
+    flex-flow: column;
+  }
+
+  div .sl-container {
+    align-items: center;
+    justify-content: center;
+    position: static;
+  }
+
+  div .sl-row {
+    flex-flow: column;
+  }
+
+  div.box.desktop {
+    display: none;
+  }
+
+  div.box.mobile {
+    display: flex;
+  }
+
+  div .box {
+    background-color: #F3F5F5;
+    width: 400px;
+    margin-right: 0;
+  }
+
+}
+
+/* Video Section */
+
+.exhibition {
+  padding: 32px 0px;
+  background-color: #F3F5F5;
+}
+
+.video-section {
+  display: flex;
+  width: 100%;
+  background-color: #F3F5F5;
+}
+
+.box-info {
+  flex-direction: column;
+  width: 60%;
+}
+
+.copy video {
+  width: 100%;
+  height: auto;
+  float: left;
+  padding-bottom: 32px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 760px) {
+  #exhibit {
+    display: none;
+  }
+
+  .box-info {
+    width: auto;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #F3F5F5;
+  padding: 3rem 2rem;
+  border-top: 1px solid lightgrey;
+}
+
+footer .content {
+  display: flex;
+  text-align: center;
+  font-size: .85rem;
+}
+
+.content span {
+  font-style:
+}
+
+footer .copyright {
+  width: 50%;
+  text-align: left;
+}
+
+footer .terms {
+  width: 50%;
+  text-align: right;
+}
+
+@media only screen and (max-width: 760px) {
+
+  footer .copyright {
+    width: auto;
+  }
+
+  footer .terms {
+    display: none;
+  }
+}
